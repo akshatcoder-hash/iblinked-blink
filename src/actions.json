@@ -1,0 +1,28 @@
+{
+    "rules": [
+      {
+        "pathPattern": "/api/create-market",
+        "apiPath": "/api/create-market"
+      },
+      {
+        "pathPattern": "/api/place-bet/*",
+        "apiPath": "/api/place-bet/*"
+      },
+      {
+        "pathPattern": "/api/resolve-market/*",
+        "apiPath": "/api/resolve-market/*"
+      },
+      {
+        "pathPattern": "/api/claim-winnings/*",
+        "apiPath": "/api/claim-winnings/*"
+      },
+      {
+        "pathPattern": "/api/cancel-bet/*",
+        "apiPath": "/api/cancel-bet/*"
+      },
+      {
+        "pathPattern": "/api/initialize-price-feed",
+        "apiPath": "/api/initialize-price-feed"
+      }
+    ]
+  }
