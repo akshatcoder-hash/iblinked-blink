@@ -65,23 +65,35 @@ function derivePriceFeedConfigPDA(priceFeed: PublicKey): PublicKey {
 // Create Market
 export async function handleCreateMarketGetRequest(): Promise<ActionGetResponse> {
   return {
-    icon: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
-    label: 'Create Market',
-    title: 'Create New Market',
-    description: 'Create a new prediction market for a memecoin.',
+    icon: "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+    title: "Create New Market",
+    label: "Create Market",
+    description: "Create a new prediction market for a memecoin.",
     links: {
       actions: [
         {
-          label: 'Create Market',
-          href: '/api/create-market',
+          label: "Create Market",
+          href: `/api/create-market/?memecoinSymbol={memecoinSymbol}&feedSymbol={feedSymbol}&duration={duration}`,
           parameters: [
-            { name: 'memecoinSymbol', label: 'Memecoin Symbol', required: true },
-            { name: 'feedSymbol', label: 'Price Feed Symbol (e.g., SOL, BTC)', required: true },
-            { name: 'duration', label: 'Market Duration (seconds)', required: true }
-          ]
-        }
-      ]
-    }
+            {
+              name: "memecoinSymbol",
+              label: "Memecoin Symbol",
+              required: true,
+            },
+            {
+              name: "feedSymbol",
+              label: "Price Feed Symbol (e.g., SOL, BTC)",
+              required: true,
+            },
+            {
+              name: "duration",
+              label: "Market Duration (seconds)",
+              required: true,
+            },
+          ],
+        },
+      ],
+    },
   };
 }
 
